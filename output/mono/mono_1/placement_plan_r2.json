@@ -1,0 +1,29 @@
+{
+    "sites": [
+        {
+            "site": "e1",
+            "applications": [
+                {
+                    "app": "pytess",
+                    "instances": 1,
+                    "users": [
+                        {
+                            "user": "u1",
+                            "request_rate": 0.002
+                        }
+                    ]
+                },
+                {
+                    "app": "m-medium",
+                    "instances": 1,
+                    "users": [
+                        {
+                            "user": "u2",
+                            "request_rate": 0.002
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+{
+    "sites": ["e1"],
+    
+    "capacities": {
+        "e1": 20
+    },
+
+    "pricing": {
+      "e1": 3
+  },
+
+
+    "opti_pref": 2,
+  
+    "applications": {
+  
+        "pytess": {
+          "slots": 2,
+          "users": ["u1"],
+          "request_rates": {
+                "u1": 0.002
+          },
+          "latency_site_user": {
+            "('e1', 'u1')": 0
+          },
+          "slo": 250,
+          "service_rate": 0.010,
+          "priority_group": 1
+      },
+  
+  
+        "m-medium": {
+          "slots": 16,
+          "users": ["u2"],
+          "request_rates": {
+                "u2": 0.008
+          },
+          "latency_site_user": {
+            "('e1', 'u2')": 0
+          },
+          "slo": 600,
+          "service_rate": 0.006,
+          "priority_group": 2,
+          
+          "degrading_models": 
+          {
+            "m-small": 
+            {
+              "level": 1,
+              "slots": 14,
+              "service_rate": 0.011,
+              "slo": 600
+            },
+
+          "m-tiny": 
+          {
+            "level": 2,
+            "slots": 12,
+            "service_rate": 0.0215,
+            "slo": 600
+          },
+
+          "m-mini": 
+          {
+            "level": 3,
+            "slots": 10,
+            "service_rate": 0.036,
+            "slo": 600
+          }
+
+          }
+    }
+
+    
+  }
+}

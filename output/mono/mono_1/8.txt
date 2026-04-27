@@ -1,0 +1,51 @@
+Set parameter Username
+Set parameter LicenseID to value 2638400
+Academic license - for non-commercial use only - expires 2026-03-19
+
+**** No feasible solution found in the original model. Degradation in process...****
+
+    ##### Degradation order based on priorities: [2, 1] #####
+
+===========================================================
+ ---- Stage 1: Degrading apps in priorities [2] ----
+        Degrading applications: ['m-medium']
+===========================================================
+
+  • m-medium can degrade to Level 3
+
+====> Applying degradation LEVEL 1 for degradable apps:
+
+[1;33m |-> m-medium is now degraded to: **m-small** (Level 1)[0m
+
+
+[1;31m No solution at this degradation level — increasing degradation... [0m
+
+
+====> Applying degradation LEVEL 2 for degradable apps:
+
+[1;33m |-> m-medium is now degraded to: **m-tiny** (Level 2)[0m
+
+
+[1;32m *** FEASIBLE SOLUTION FOUND after degradation! *** [0m
+
+ Degraded Models Used: ['m-tiny']
+ Active Model Names: {'pytess': 'pytess', 'm-medium': 'm-tiny'}
+
+====================================================================================================
+**** Model degradation introduced for priority levels 1, 2: m-tiny ****
+Model degradation details:
+----------------------------------------------------------------------------------------------------
+Site e1 is open for app: pytess with 4 instances, 1.0 users assigned.
+    Arrival rate at the instances for *pytess*: 0.00200, Utilization of instances: 0.20000
+*** SLO used for pytess: 250 ***
+  User u1 with average RTT 112.5 and 99.0% percentile RTT 243.4447666351175.
+    Probability that the requests of this user will stay below the SLT-RTT: 0.9914733726147507
+----------------------------------------------------------------------------------------------------
+Site e1 is open for app: m-tiny with 1 instances, 1.0 users assigned.
+    Arrival rate at the instances for *m-tiny*: 0.00200, Utilization of instances: 0.09302
+*** SLO used for m-tiny: 600 ***
+  User u2 with average RTT 48.89683959451402 and 99.0% percentile RTT 90.30569476218403.
+    Probability that the requests of this user will stay below the SLT-RTT: 1.0
+====================================================================================================
+Placement plan has been saved to placement_plan_r8.json
+Elapsed time: 0.02 seconds

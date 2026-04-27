@@ -1,0 +1,19 @@
+Set parameter Username
+Set parameter LicenseID to value 2638400
+Academic license - for non-commercial use only - expires 2026-03-19
+====================================================================================================
+----------------------------------------------------------------------------------------------------
+Site e1 is open for app: pytess with 1 instances, 1.0 users assigned.
+    Arrival rate at the instances for *pytess*: 0.00200, Utilization of instances: 0.20000
+*** SLO used for pytess: 250 ***
+  User u1 with average RTT 112.5 and 99.0% percentile RTT 243.4447666351175.
+    Probability that the requests of this user will stay below the SLT-RTT: 0.9914733726147507
+----------------------------------------------------------------------------------------------------
+Site e1 is open for app: m-medium with 1 instances, 1.0 users assigned.
+    Arrival rate at the instances for *m-medium*: 0.00200, Utilization of instances: 0.33333
+*** SLO used for m-medium: 600 ***
+  User u2 with average RTT 208.33333333333331 and 99.0% percentile RTT 515.0006007555869.
+    Probability that the requests of this user will stay below the SLT-RTT: 0.9961821268206908
+====================================================================================================
+Placement plan has been saved to placement_plan_r1.json
+Elapsed time: 0.02 seconds
