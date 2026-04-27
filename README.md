@@ -73,9 +73,9 @@ python model_MVSP.py --input input/multi/<config>.json \
                      --round 1
 ```
 
-The output JSON files contain the placement plans as reported
-in the paper (number of instances per application per site,
-selected model variants, and predicted P99 latencies).
+The output JSON files serve as inputs to the Ansible automation scripts
+used to drive the experiments reported in the paper.
+The full experimental codebase will be released upon acceptance.
 
 ---
 
@@ -83,11 +83,12 @@ selected model variants, and predicted P99 latencies).
 
 Each input JSON file specifies:
 - Edge site capacities (in resource slots)
+- Edge site pricing (only needed in minimizing the cost)
+- Optimization objective (`min_slots` or `min_cost`)
 - Application definitions (model variants, resource demands,
   service rates, SLO thresholds, priority levels)
-- User group definitions (request rates, network latencies
+- Local User Groups definitions for each application (request rates, network latencies mapping
   to each site)
-- Optimization objective (`min_slots` or `min_cost`)
 
 ---
 
