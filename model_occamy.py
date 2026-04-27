@@ -394,15 +394,13 @@ def placement_plan_json(universal_placement_plan, exp_round_index, active_model_
 
 def main ():
 
-    parser = argparse.ArgumentParser(description='Run the Multi-LASSY optimization.')
-    parser.add_argument('--round', type=int, required=True, help='The round index for the JSON file.')
+    parser = argparse.ArgumentParser(description='Run the OCCAMY optimization.')
+    parser.add_argument('--input', type=str, required=True, help='Path to the input JSON file.')
+    parser.add_argument('--round', type=int, required=True, help='The round index for the output file.')
     args = parser.parse_args()
 
     exp_round_index = args.round
-
-    script_dir = os.path.dirname(os.path.realpath(__file__))
-
-    json_file = os.path.join(script_dir, 'input/heuristic/ample/6app.json')
+    json_file = args.input
 
     with open(json_file, 'r') as f:
         data = json.load(f)

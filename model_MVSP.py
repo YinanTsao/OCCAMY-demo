@@ -4,6 +4,7 @@ import os
 from collections import defaultdict
 from pprint import pprint  # <-- added for pretty printing
 import math
+import argparse
 MAX_RECURSION = 10
 
 
@@ -359,11 +360,13 @@ if __name__ == "__main__":
 
 
    
-    input_file = 'input/multi/#7.json'
+    parser = argparse.ArgumentParser(description='Run the MVSP baseline.')
+    parser.add_argument('--input', type=str, required=True, help='Path to the input JSON file.')
+    parser.add_argument('--round', type=int, required=True, help='The round index for the output file.')
+    args = parser.parse_args()
+
     script_dir = os.path.dirname(os.path.realpath(__file__))
-    print()
-    json_file = os.path.join(script_dir, input_file)
-    with open(json_file, 'r') as f:
+    with open(args.input, 'r') as f:
         input_data = json.load(f)
 
     sites = input_data["sites"]
