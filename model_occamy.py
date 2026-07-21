@@ -38,7 +38,7 @@ def waitingTimeDistr(t, lm, service_rate):
 
 def initialize_model(sites, pricing, opti_pref, applications, capacities, theta):
     # Initialize the model
-    model = Model("Cerberus_Gopt")
+    model = Model("OCCAMY_Gopt")
 
     # Set Gurobi parameters
     # model.setParam(GRB.Param.TimeLimit, 2000)  # Limit the solver to 60 seconds
